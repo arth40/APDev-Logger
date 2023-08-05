@@ -9,7 +9,7 @@ This logger is made by a developer for the developers to make their logging expe
 ### Steps to use
 #### Step-1 : Initialize a class object
 ````
-import {APDevLogger, trace, logCategory, logTypes} from  './lib';
+import {APDevLogger, trace, logCategory, logTypes} from "apdev-logger";;
 const  apLogger  =  new  APDevLogger({type:  logTypes.TEXT,  colorized:true,  switch:  'on'});
 ````
 **type:** logTypes.JSON | logTypes.TEXT ( default: TEXT ) - ~~*optional*~~ <br />
