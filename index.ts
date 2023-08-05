@@ -128,9 +128,20 @@ export class APDevLogger {
         }
         if (this.configSwitch === 'on') {
             if (this.isColorized) {
-                console.log(logColor,'>> ',this.generateLog(log, this.logType),'\x1b[0m');
+                if (this.logType === logTypes.JSON) {
+                    console.log(logColor,this.generateLog(log, this.logType),'\x1b[0m');
+                }
+                else {
+                    console.log(logColor,'>> ',this.generateLog(log, this.logType),'\x1b[0m');
+                }
             }
             else {
+                if (this.logType === logTypes.JSON) {
+                    console.log(this.generateLog(log, this.logType));
+                }
+                else {
+                    console.log('>> ',this.generateLog(log, this.logType));
+                }
                 console.log('>> ',this.generateLog(log, this.logType));
             }
         }
