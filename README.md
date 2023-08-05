@@ -5,6 +5,7 @@ This logger is made by a developer for the developers to make their logging expe
 
     npm install apdev-logger
 
+
 ### Steps to use
 #### Step-1 : Initialize a class object
 ````
