@@ -11,9 +11,9 @@ This logger is made by a developer for the developers to make their logging expe
 import {APDevLogger, trace, logCategory, logTypes} from  './lib';
 const  apLogger  =  new  APDevLogger({type:  logTypes.TEXT,  colorized:true,  switch:  'on'});
 ````
-**type:** logTypes.JSON | logTypes.TEXT ( default: TEXT ) - ~~*optional*~~
-**colorized:** true | false [default: true] - ~~*optional*~~
-**switch:** 'on' | 'off' [default: 'on'] (In case you want to use regular console logs) - ~~*optional*~~ 
+**type:** logTypes.JSON | logTypes.TEXT ( default: TEXT ) - ~~*optional*~~ <br>
+**colorized:** true | false [default: true] - ~~*optional*~~ <br>
+**switch:** 'on' | 'off' [default: 'on'] (In case you want to use regular console logs) - ~~*optional*~~ <br>
 
 #### Step-2 : Use the instance
 ````
@@ -23,9 +23,9 @@ apLogger.log(logCategory.SUCCESS,'Successfully stored Data');
 apLogger.log(logCategory.WARNING,'Database connection is down!',trace());
 apLogger.log(logCategory.ERROR,'Failed to save User data',trace());
 ````
-Param-1: Category of logs
-Param-2: Message string / stringify json
-Param-3: If want to add line tracing to logs - ~~*optional*~~
+Param-1: Category of logs <br>
+Param-2: Message string / stringify json <br>
+Param-3: If want to add line tracing to logs - ~~*optional*~~ <br>
 
 
 ### Text Output
