@@ -1,14 +1,25 @@
 {
-  "name": "js-made-easy",
-  "version": "1.0.0",
+  "name": "apdev-logger",
+  "version": "1.0.6",
   "description": "Logger made for beutifying logging exeperience for developers",
-  "main": "index.js",
+  "main": "build/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arth40/APDev-Logger"
+  },
   "scripts": {
     "tsc": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Arth Panchani",
   "license": "MIT",
+  "keywords": [
+    "logger",
+    "custom",
+    "developer",
+    "logging",
+    "logs"
+  ],
   "dependencies": {
     "typescript": "^5.1.6"
   }

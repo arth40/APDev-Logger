@@ -131,4 +131,4 @@ dist
 
 package-lock.json
 client.*
-lib/
+build/
