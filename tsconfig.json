@@ -4,7 +4,7 @@
     "target": "es5",
     "module": "commonjs",
     "declaration": true,
-    "outDir": "lib",
+    "outDir": "build",
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
@@ -14,6 +14,6 @@
   ],
   "exclude": [
     "client.ts",
-    "./lib/**/*"
+    "./build/**/*"
   ]
 }
