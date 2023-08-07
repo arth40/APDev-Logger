@@ -9,7 +9,7 @@ This logger is made by a developer for the developers to make their logging expe
 ### Steps to use
 #### Step-1 : Initialize a class object
 ````
-import {APDevLogger, trace, logCategory, logTypes} from "apdev-logger";;
+import {APDevLogger, trace, logLevel, logTypes} from "apdev-logger";;
 const  apLogger  =  new  APDevLogger({type:  logTypes.TEXT,  colorized:true,  switch:  'on'});
 ````
 **type:** logTypes.JSON | logTypes.TEXT ( default: TEXT ) - ~~*optional*~~ <br />
@@ -18,13 +18,13 @@ const  apLogger  =  new  APDevLogger({type:  logTypes.TEXT,  colorized:true,  sw
 
 #### Step-2 : Use the instance
 ````
-apLogger.log(logCategory.DEBUG,'Reaching this checkpoint...',trace());
-apLogger.log(logCategory.INFO,'User is active now!');
-apLogger.log(logCategory.SUCCESS,'Successfully stored Data');
-apLogger.log(logCategory.WARNING,'Database connection is down!',trace());
-apLogger.log(logCategory.ERROR,'Failed to save User data',trace());
+apLogger.log(logLevel.DEBUG,'Reaching this checkpoint...',trace());
+apLogger.log(logLevel.INFO,'User is active now!');
+apLogger.log(logLevel.SUCCESS,'Successfully stored Data');
+apLogger.log(logLevel.WARNING,'Database connection is down!',trace());
+apLogger.log(logLevel.ERROR,'Failed to save User data',trace());
 ````
-Param-1: Category of logs <br />
+Param-1: Level of logs <br />
 Param-2: Message string / stringify json <br />
 Param-3: If want to add line tracing to logs - ~~*optional*~~ <br />
 

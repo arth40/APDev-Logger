@@ -1,6 +1,6 @@
 {
   "name": "apdev-logger",
-  "version": "1.0.11",
+  "version": "1.1.0",
   "description": "Logger made for beutifying logging exeperience for developers",
   "main": "build/index.js",
   "repository": {
@@ -18,7 +18,10 @@
     "custom",
     "developer",
     "logging",
-    "logs"
+    "logs",
+    "typescript",
+    "javascript",
+    "node"
   ],
   "dependencies": {
     "typescript": "^5.1.6"
