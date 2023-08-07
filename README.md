@@ -34,7 +34,8 @@ Param-3: If want to add line tracing to logs - ~~*optional*~~ <br />
 
 
 ### JSON Output
-![JSON Log Output](https://github.com/arth40/APDev-Logger/assets/59698234/88aa309a-024f-48fa-80aa-9ab590c89ee8)
+![JSON Log Output](https://github.com/arth40/APDev-Logger/assets/59698234/3ec84dd3-6d7d-4dee-ad73-cd00225ced59)
+
 
 
 ###
