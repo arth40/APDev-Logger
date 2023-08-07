@@ -34,7 +34,7 @@ interface configs {
     colorized?: boolean,
 }
 
-export enum logCategory {
+export enum logLevel {
     DEBUG = 'DEBUG',
     INFO = 'INFO',
     SUCCESS = 'SUCCESS',
@@ -43,7 +43,7 @@ export enum logCategory {
 }
 
 interface logInterface {
-    category: logCategory,
+    level: logLevel,
     message: string,
     trace?: string,
 }
@@ -79,13 +79,13 @@ export class APDevLogger {
             return logString;
         }
         else {
-            let logCategory = log.category.slice();
+            let logLevel = log.level.slice();
             for (let i=0; i<8; i++) {
-                if (!logCategory[i]) {
-                    logCategory = logCategory + ' ';
+                if (!logLevel[i]) {
+                    logLevel = logLevel + ' ';
                 }
             }
-            logString = logCategory + ' |-| ' + log.message;
+            logString = logLevel + ' |-| ' + log.message;
             if (this.isLineTrace) {
                 logString = logString + ' ' + log.trace;
             }
@@ -93,7 +93,7 @@ export class APDevLogger {
         }
     }
 
-    log (category: logCategory, message: string, trace?: string) {
+    log (level: logLevel, message: string, trace?: string) {
         let logColor;
         if (trace) {
             this.isLineTrace = true;
@@ -102,24 +102,24 @@ export class APDevLogger {
             this.isLineTrace = false;
         }
         const log: logInterface = {
-            category,
+            level,
             message,
             trace,
         }
-        switch (category) {
-            case logCategory.DEBUG:
+        switch (level) {
+            case logLevel.DEBUG:
                 logColor = '\x1b[35m';
                 break;
-            case logCategory.INFO:
+            case logLevel.INFO:
                 logColor = '\x1b[34m';
                 break;
-            case logCategory.SUCCESS:
+            case logLevel.SUCCESS:
                 logColor = '\x1b[32m';
                 break;
-            case logCategory.WARNING:
+            case logLevel.WARNING:
                 logColor = '\x1b[33m';
                 break;
-            case logCategory.ERROR:
+            case logLevel.ERROR:
                 logColor = '\x1b[31m';
                 break;
             default:
