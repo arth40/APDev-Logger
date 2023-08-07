@@ -129,7 +129,7 @@ export class APDevLogger {
         if (this.configSwitch === 'on') {
             if (this.isColorized) {
                 if (this.logType === logTypes.JSON) {
-                    console.log(`${logColor}${this.generateLog(log, this.logType)},'\x1b[0m'`);
+                    console.log(`${logColor}${this.generateLog(log, this.logType)}\x1b[0m`);
                 }
                 else {
                     console.log(`${logColor}>> `,this.generateLog(log, this.logType),'\x1b[0m');
