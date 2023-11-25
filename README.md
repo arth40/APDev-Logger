@@ -25,7 +25,7 @@ apLogger.log(logLevel.WARNING,'Database connection is down!',null,trace());
 apLogger.log(logLevel.ERROR,'Failed to save User data',{value:123,name:'arth'},trace());
 ````
 Param-1: Level of logs <br />
-Param-2: Message string / stringify json <br />
+Param-2: Message string/stringify json <br />
 Param-3: Extra JSON Data if any - ~~*optional(should be null if want to use Param-4)*~~ <br />
 Param-4: If want to add line tracing to logs - ~~*optional*~~ <br />
 
