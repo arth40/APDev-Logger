@@ -26,16 +26,16 @@ apLogger.log(logLevel.ERROR,'Failed to save User data',{value:123,name:'arth'},t
 ````
 Param-1: Level of logs <br />
 Param-2: Message string/stringify json <br />
-Param-3: Extra JSON Data if any - ~~*optional(should be null if want to use Param-4)*~~ <br />
+Param-3: Extra JSON Data if any - ~~*optional*~~*(should be null if want to use Param-4)* <br />
 Param-4: If want to add line tracing to logs - ~~*optional*~~ <br />
 
 ###
 ### Text Output
-![Text Log Output](https://github.com/arth40/APDev-Logger/assets/59698234/e8b00ece-f64f-467e-a0e0-af286c1b9f6d)
+![Text Log Output](https://github.com/arth40/APDev-Logger/assets/59698234/4758f0ed-1be0-4037-b975-f5e3e3aaa54c)
 
 
 ### JSON Output
-![JSON Log Output](https://github.com/arth40/APDev-Logger/assets/59698234/cd7e6ef3-5917-4597-a30c-24eebef5fcab)
+![JSON Log Output](https://github.com/arth40/APDev-Logger/assets/59698234/f60a50d7-1627-4701-b039-99b66544775e)
 
 
 
