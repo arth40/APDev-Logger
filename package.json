@@ -1,7 +1,7 @@
 {
   "name": "apdev-logger",
-  "version": "1.1.0",
-  "description": "Logger made for beutifying logging exeperience for developers",
+  "version": "2.0.0",
+  "description": "Logger made for beautifying logging exeperience for developers",
   "main": "build/index.js",
   "repository": {
     "type": "git",

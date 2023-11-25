@@ -45,6 +45,7 @@ export enum logLevel {
 interface logInterface {
     level: logLevel,
     message: string,
+    data: any,
     trace?: string,
 }
 
@@ -89,11 +90,14 @@ export class APDevLogger {
             if (this.isLineTrace) {
                 logString = logString + ' ' + log.trace;
             }
+            if(log?.data) {
+                logString = logString + ' |-| ' + JSON.stringify(log.data);
+            }
             return logString;
         }
     }
 
-    log (level: logLevel, message: string, trace?: string) {
+    log (level: logLevel, message: string, data?:any, trace?: string) {
         let logColor;
         if (trace) {
             this.isLineTrace = true;
@@ -104,6 +108,7 @@ export class APDevLogger {
         const log: logInterface = {
             level,
             message,
+            data,
             trace,
         }
         switch (level) {
