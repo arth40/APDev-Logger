@@ -28,7 +28,7 @@ export enum logTypes {
     JSON = 'json',
 }
 
-interface configs {
+export interface configs {
     switch?: 'on' | 'off',
     type?: logTypes,
     colorized?: boolean,
@@ -42,7 +42,7 @@ export enum logLevel {
     ERROR = 'ERROR',
 }
 
-interface logInterface {
+export interface logInterface {
     level: logLevel,
     message: string,
     data: any,
