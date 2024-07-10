@@ -17,13 +17,25 @@ const  apLogger  =  new  APDevLogger({type:  logTypes.TEXT,  colorized:true,  sw
 **switch:** 'on' | 'off' [default: 'on'] (In case you want to use regular console logs) - ~~*optional*~~ <br />
 
 #### Step-2 : Use the instance
-````
+```
+apLogger.debug('Reaching this checkpoint...',null,trace());
+apLogger.info('User is active now!');
+apLogger.success('Successfully stored Data',{value:123,name:'arth'});
+apLogger.warn('Database connection is down!',null,trace());
+apLogger.error('Failed to save User data',{value:123,name:'arth'},trace());
+```
+Param-1: Message string/stringify json <br />
+Param-2: Extra JSON Data if any - ~~*optional*~~*(should be null if want to use Param-4)* <br />
+Param-3: If want to add line tracing to logs - ~~*optional*~~ <br />
+
+Till version (2.0.1) - Will be deprecated soon
+```
 apLogger.log(logLevel.DEBUG,'Reaching this checkpoint...',null,trace());
 apLogger.log(logLevel.INFO,'User is active now!');
 apLogger.log(logLevel.SUCCESS,'Successfully stored Data',{value:123,name:'arth'});
 apLogger.log(logLevel.WARNING,'Database connection is down!',null,trace());
 apLogger.log(logLevel.ERROR,'Failed to save User data',{value:123,name:'arth'},trace());
-````
+```
 Param-1: Level of logs <br />
 Param-2: Message string/stringify json <br />
 Param-3: Extra JSON Data if any - ~~*optional*~~*(should be null if want to use Param-4)* <br />

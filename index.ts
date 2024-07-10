@@ -153,6 +153,106 @@ export class APDevLogger {
             console.log(message);
         }
     }
+
+    printLog (log: logInterface, message: string) {
+        let logColor;
+        switch (log.level) {
+            case logLevel.DEBUG:
+                logColor = '\x1b[35m';
+                break;
+            case logLevel.INFO:
+                logColor = '\x1b[34m';
+                break;
+            case logLevel.SUCCESS:
+                logColor = '\x1b[32m';
+                break;
+            case logLevel.WARNING:
+                logColor = '\x1b[33m';
+                break;
+            case logLevel.ERROR:
+                logColor = '\x1b[31m';
+                break;
+            default:
+                logColor = '\x1b[37m';
+                break;
+        }
+        if (this.configSwitch === 'on') {
+            if (this.isColorized) {
+                if (this.logType === logTypes.JSON) {
+                    console.log(`${logColor}${this.generateLog(log, this.logType)}\x1b[0m`);
+                }
+                else {
+                    console.log(`${logColor}>> `,this.generateLog(log, this.logType),'\x1b[0m');
+                }
+            }
+            else {
+                if (this.logType === logTypes.JSON) {
+                    console.log(this.generateLog(log, this.logType));
+                }
+                else {
+                    console.log('>> ',this.generateLog(log, this.logType));
+                }
+            }
+        }
+        else {
+            console.log(message);
+        }
+    }
+
+    debug (message: string, data?:any, trace?: string) {
+        this.isLineTrace = trace ? true : false;
+        const log: logInterface = {
+            level: logLevel.DEBUG,
+            message,
+            data,
+            trace,
+        }
+        this.printLog(log, message);
+    }
+
+    error (message: string, data?:any, trace?: string) {
+        this.isLineTrace = trace ? true : false;
+        const log: logInterface = {
+            level: logLevel.ERROR,
+            message,
+            data,
+            trace,
+        }
+        this.printLog(log, message);
+    }
+
+    warn (message: string, data?:any, trace?: string) {
+        this.isLineTrace = trace ? true : false;
+        const log: logInterface = {
+            level: logLevel.WARNING,
+            message,
+            data,
+            trace,
+        }
+        this.printLog(log, message);
+    }
+
+    info (message: string, data?:any, trace?: string) {
+        this.isLineTrace = trace ? true : false;
+        const log: logInterface = {
+            level: logLevel.INFO,
+            message,
+            data,
+            trace,
+        }
+        this.printLog(log, message);
+    }
+
+    success (message: string, data?:any, trace?: string) {
+        this.isLineTrace = trace ? true : false;
+        const log: logInterface = {
+            level: logLevel.SUCCESS,
+            message,
+            data,
+            trace,
+        }
+        this.printLog(log, message);
+    }
 }
 
 export const trace = (): string => {
